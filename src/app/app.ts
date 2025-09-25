@@ -12,7 +12,6 @@ export class App {
   isDarkMode = false;
 
   ngOnInit() {
-    // Check if dark mode is already enabled
     const element = document.querySelector('html');
     this.isDarkMode = element?.classList.contains('my-app-dark') || false;
   }
