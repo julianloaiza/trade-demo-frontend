@@ -1,0 +1,19 @@
+<p-table [value]="positionsArray()" [tableStyle]="{ 'min-width': '50rem' }">
+  <ng-template pTemplate="header">
+    <tr>
+      <th>Account</th>
+      <th>Security</th>
+      <th>Position</th>
+      <th>Last Updated</th>
+    </tr>
+  </ng-template>
+  
+  <ng-template pTemplate="body" let-position>
+    <tr>
+      <td>{{ position.account }}</td>
+      <td>{{ position.securityId }}</td>
+      <td>{{ position.totalShares | number }}</td>
+      <td>{{ position.lastUpdated | date:'HH:mm:ss' }}</td>
+    </tr>
+  </ng-template>
+</p-table>
